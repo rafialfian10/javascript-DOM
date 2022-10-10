@@ -1,0 +1,52 @@
+* { /*//reset*/
+	margin: 0px;
+	padding: 0px;
+	line-height: 0; /*untuk menghilangkan enter pada gambar*/
+}
+
+body {
+	background-color: #ccc;
+	text-align: center;
+}
+
+.container {
+	width: 1200px;
+	margin: 20px auto; /*agar tidak mepet diatas*/
+	border: 5px solid white;
+	overflow: auto; /*supaya border container aka membungkus semua gambar(thumb)*/
+	
+}
+
+.thumb {
+	width: 400px;
+	float: left;
+	border: 2px solid white;
+	box-sizing: border-box; /*supaya tidak memperdulikan border pada thumb.*/
+}
+
+.thumb:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+/*tambah animasi pada saat thumb diclick, maka akan muncul animasi pada gBesar dengan cara membuat @keyframes lalu beri nama bebas lalu beri to artinya adalah sebuah keadaan akan berubah menjadi animasi (fadeIn) ini*/
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+.fade {
+	opacity: 0;
+	animation: fadeIn 0.5s forwards; /*supaya animasi ini akan berjalan selama 0.5 detik, tambahkan forwards supaya animasinya akan berhenti di keadaan akhir, karena jika tidak diberi forwards, maka gBesar opacity-nya akan bernilai 0 terus. samakan nama animation dengan nama @keyframes*/
+}
+
+.active { /*ini akan digunakan pada saat thumb diclick maka thumb-nya opacity-nya akan bernilai 0.5*/
+	opacity: 0.5;
+}
+
+
+
+
+
+
